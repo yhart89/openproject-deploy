@@ -52,7 +52,7 @@ services:
     <<: [*image, *restart_policy]
     command: "./docker/prod/proxy"
     ports:
-      - "${PORT:-8080}:80"
+      - "${PORT:-8000}:80"
     environment:
       APP_HOST: web
       OPENPROJECT_RAILS__RELATIVE__URL__ROOT: "${OPENPROJECT_RAILS__RELATIVE__URL__ROOT:-}"
